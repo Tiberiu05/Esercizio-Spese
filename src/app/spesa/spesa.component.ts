@@ -15,6 +15,7 @@ export class SpesaComponent
   [
     200,
     -200,
+    
   ]
 
 
