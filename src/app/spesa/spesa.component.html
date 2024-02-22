@@ -1,0 +1,33 @@
+<body>
+    <div class="container">
+        <div class="box">
+            <div id="aggiungi">
+                    <input name="input" type="number" min="0" [(ngModel)]="newSpesa">
+
+                    <div class="bottoni">
+                        <div class="bottone1">
+                            <button (click)="addNewEntrata()">Aggiungi Entrata</button>
+                        </div>
+                        <div class="bottone2">
+                            <button (click)="addNewUscita()">Aggiungi Uscita</button>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="lista">
+                <div
+                    *ngFor= "let t of lista; let i = index"
+                    [ngClass]="(t < 0)? 'red' : 'green'">
+                    <div class="quantita">
+                        <p>
+                            {{t}}
+                        </p>
+                    </div>
+                    <div class="x">
+                        <button (click)="removeSpesa(i)">x</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
